@@ -1,0 +1,4 @@
+package com.corebank.cards.dto;
+
+public class CardsDto {
+}

@@ -1,0 +1,4 @@
+package com.corebank.loans.entity;
+
+public class Loans {
+}

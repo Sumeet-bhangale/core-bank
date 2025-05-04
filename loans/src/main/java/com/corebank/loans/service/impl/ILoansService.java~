@@ -1,0 +1,4 @@
+package com.corebank.loans.service.impl;
+
+public interface ILoansService {
+}

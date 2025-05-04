@@ -1,0 +1,4 @@
+package com.corebank.loans.audit;
+
+public class AuditAwareImpl {
+}

@@ -1,0 +1,40 @@
+package com.corebank.accounts.dto;
+
+import io.swagger.v3.oas.annotations.media.Schema;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.Pattern;
+import jakarta.validation.constraints.Size;
+import lombok.Data;
+import org.springframework.format.annotation.NumberFormat;
+
+@Data
+@Schema(
+        name = "Customer",
+        description = "Schema to hold Customer and Account information"
+)
+public class CustomerDto {
+
+    @Schema(
+            description = "Name of the customer", example = "John D"
+    )
+    @NotEmpty(message = "Name can not be a null or empty")
+    @Size(max = 50, min = 5, message = "Name must be between 5 and 50 characters")
+    private String name;
+
+    @Schema(
+            description = "Email address of the customer", example = "john@gmail.com"
+    )
+    @NotEmpty(message = "Email can not be a null or empty")
+    @Email(message = "Email must be valid")
+    private String email;
+
+    @Schema(
+            description = "Mobile Number of the customer", example = "9345432123"
+    )
+    @Pattern(regexp = "(^$|[0-9]{10})", message = "MobileNumber must be 10 digits")
+    private String mobileNumber;
+
+    private AccountsDto accountsDto;
+
+}

@@ -1,0 +1,4 @@
+package com.corebank.accounts.repository;
+
+public interface AccountRepository {
+}
