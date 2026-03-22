@@ -1,0 +1,20 @@
+server:
+  port: 8085
+
+spring:
+  application:
+    name: corebank-mcp-server
+  ai:
+    mcp:
+      server:
+        name: CoreBank MCP Server
+        version: 1.0.0
+        # SSE endpoint will be available at: http://localhost:8085/sse
+        # Message endpoint:                  http://localhost:8085/mcp/message
+
+        # URLs of the 3 CoreBank microservices
+corebank:
+  services:
+    accounts-url: http://localhost:8080
+    cards-url: http://localhost:9001
+    loans-url: http://localhost:8090
